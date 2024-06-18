@@ -1,2 +1,1 @@
-# xray.github.io
-Font for my GameBanana uberstyle
+# Font for my GameBanana uberstyle
