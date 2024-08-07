@@ -48,7 +48,7 @@ body[data-_sSiteMaxWidth=Medium] #BodyWrapper {
     max-width: 1800px;
 }
 .Content {
-    background: #06060691;
+    background: #06060691 !important;
     backdrop-filter: blur(6px);
     box-shadow: 0 0 3px black;
 }
