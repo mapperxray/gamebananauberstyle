@@ -468,7 +468,7 @@ body[data-_sSiteMaxWidth=Small] #BodyWrapper {
 .row .cell:hover
 {
     background  : #000;
-    box-shadow  : 0 0 16px #ffffff;
+    box-shadow  : 0 0 16px #000000; /*for debug purposes*/
     /*box-shadow  : 0 0 16px #7EA5D8;*/
     
 }
