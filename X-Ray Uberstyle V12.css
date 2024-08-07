@@ -1,0 +1,740 @@
+/*___________________________________________*/
+/*                                           */
+/*   Uberstyle Created By X-Ray              */
+/*   Co-Created By: BlaXe                    */
+/*   Helped By: Ring-A-Ding Rampage          */
+/*                                           */
+/*   Official Creation Date: 17.02.2016      */
+/*                                           */
+/*   Version: V11.7                          */
+/*                                           */
+/*   Last Edit: 07.08.2024                   */
+/*                                           */
+/*                                           */
+/*   Editor note: This uber is old asf       */
+/*   actually. It's a wonder how this        */
+/*   uberstyle survided till today.          */
+/*                                           */
+/*   Feel free to check out the codes.       */
+/*   But ONLY check it. No stealing please.  */
+/*___________________________________________*/ 
+/*                                           */
+@font-face
+{
+    cursor: url('https://i.postimg.cc/9MxkxWWh/aa-cursor.png'), default !important;
+    font-family: 'xray';
+    src: url('https://mapperxray.github.io/gamebananauberstyle/xray.ttf');
+}
+:root {
+    --BodyBackground: none
+	--DefaultGreyColor                    : rgb(147 212 255 / 63%);
+	--DefaultGreenColor                   : rgb(0 154 255);
+	--ButtonBackground                    : rgb(41 96 133 / 96%);
+	--InputBackgroundColor                : #091624;
+	--InputHoverBackgroundColor           : #0a1b2c;
+	--InputFocusBackgroundColor           : #0a1b2c;
+	-SubNavigatorTabHoverBorderColor      : #87d2ff;
+	--StateLabelBackground                : black;
+	--InputTitleUnderlineColor            : #dcdcdc;
+}
+
+body {
+    background: #000 url('https://www.psdgraphics.com/file/world-map-background.jpg') fixed no-repeat;
+    background-size: 100.5% 150vh;
+    cursor: url('http://i.imgur.com/lIIono0.png'), default !important;
+}
+body[data-_sSiteMaxWidth=Medium] #BodyWrapper {
+    width: 1300px;
+    max-width: 1800px;
+}
+.Content {
+    background: #06060691;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 3px black;
+}
+#MainContent {
+    background: none;
+}
+#HeadlineWrapper {
+    justify-content: center;
+}
+#HeadlineWrapper overlay h1 {
+	display: flex;
+    font-size: 0;
+	 background: url(https://i.imgur.com/CUsIJRl.gif);
+    /*background: url(https://media.giphy.com/media/fik5qVRCmfYnTeTAI3/giphy.gif);*/ /*OLD ONE*/
+    background-size: 100%;
+    padding: 200px;
+    margin: 0px;
+	margin-right: 0px;
+    margin-left: 0px;
+    height: 90px;
+    width: 557px;
+    border: 4px double #7EA5D8;
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 16px #7EA5D8 inset;
+}
+#HeadlineWrapper overlay h1:hover {
+    box-shadow: 0 0 25px inset #a1c7f9;
+	background: url(https://i.imgur.com/v38xpPC.gif);
+    /*background: url(https://media.giphy.com/media/3YKFb3nR1irWtI3Ufa/giphy.gif);*/ /*OLD ONE*/
+    background-size: 100%;
+    transition: .2s ease-in-out;
+}
+#HeadlineWrapper overlay {
+    color: var(--PageTitleColor);
+    padding: 1em;
+    width: 100%;
+    padding: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+#HeadlineWrapper overlay hWrapper {
+    flex-basis: 0%; 
+    align-self: flex-start;
+}
+#PrimaryNav {
+    background: #0000006e;
+    position: static;
+}
+#SecondaryNav {
+    z-index: 4;
+	height: 36px;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: absolute !important;
+    transition: .2s ease-in-out;
+    background: rgb(14 30 43 / 57%);
+    overflow: hidden;
+	/* Old, Unneccessary but don't wanna delete*/
+	/* border: 4px double #7EA5D8; */
+	/*top: 10px;*/ /*Causing a bug?*/
+    /*top: 3px !important;*/
+}
+#PrimaryNav module pane, #SecondaryNav module pane {
+    display: none;
+    backdrop-filter: blur(5px);
+    text-shadow: 0 0 3px white;
+    background: #0e131785;
+    /*position: absolute;*/
+}
+body[data-_sSecondaryNavPosition=Left] #SecondaryNav {
+    right: 270px !important;
+}
+nav#SecondaryNav {
+    right: 270px !important;
+}
+body[data-_sSecondaryNavMode=Strip][data-_sSecondaryNavIconSize=Small] #SecondaryNav {
+    /*width: 46px !important;*/
+    height: 615px !important;
+    left: 0px !important;
+    /*This Adjusts Strip*/
+}
+nav#PrimaryNav {
+    max-width: 70px !important;
+}
+#SecondaryNav>wrapper module.HasUpdates icon {
+    background: #ff00009e;
+    animation-name: TabHasUpdatesBlink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes TabHasUpdatesBlink { 
+     0% { background: #ff00009e; } 
+    50% { background: rgba(92, 163, 221, 0.55); } 
+    100% { background: #ff00009e; } }
+}
+module#BananaNavModule {
+    display: none !important;
+}
+module#SectionsNavModule {
+    visibility: hidden;
+}
+body[data-_sHeaderStyle=Floating] #MainContentHeader.Fixed {
+    transform: translateZ(0);
+    opacity: 0;
+    background: #151d23;
+    background: var(--FixedMainContentHeaderBackground);
+    top: 60px;
+    top: var(--TopNavHeight);
+    margin-top: -60px;
+    position: fixed;
+}
+.DropdownMenuSubNavigator {
+    background: #00000073;
+    margin-left: 20px;
+    box-shadow: 0 0 10px #0000009e;
+}
+ul.sf-menu.DropdownMenuSubNavigator.sf-js-enabled.sf-arrows {
+    text-align: center;
+}
+#SubNavigator {
+    font-size: 14px;
+}
+#SubNavigator .DropdownMenuSubNavigator > li > a {
+    font-family: 'xray';
+    text-transform: uppercase;
+}
+#SubNavigator .DropdownMenuSubNavigator>li {
+    text-transform: uppercase;
+    font-family: 'xray';
+}
+#SubNavigator li spriteIcon {
+    display: none;
+}
+.PageModule > h3 {
+    display: block;
+    text-align: center;
+    background: #293b4ab8;
+    backdrop-filter: blur(4px);
+    font-size: 1.23rem;
+    font-family: 'xray';
+    text-shadow: 0 0 6px #4297e0;
+	text-transform: uppercase;
+    margin-bottom: 0em;
+    padding: 10px;
+    border: 4px double #7EA5D8;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 0 6px #7EA5D8;
+}
+.PageModule>h3:after {
+    background: none;
+}
+h3 {
+    margin: 0 0 0.25em;
+    display: block;
+    text-align: center;
+    background: #293b4ab8;
+    font-size: 1.23rem;
+    font-family: 'xray';
+    text-shadow: 0 0 6px #4297e0;
+    margin-bottom: 0em;
+    padding: 15px;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    box-shadow: 0 0 3px black;
+}
+.PageModule>h2 {
+    font-size: 21px;
+    margin: 0 0 .5em 0;
+    padding: 17px;
+    border: 4px double #7EA5D8;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.8) !important;
+    font-family: 'xray';
+	text-transform: uppercase;
+}
+.PageModule>h2:after {
+    height: .1em;
+    margin: .25em 0 0 0;
+    display: none;
+    content: "";
+    width: 2em;
+    background: var(--ModuleTitleUnderlineColor);
+}
+module.PageModule > div.Content {
+    backdrop-filter: blur(12px);
+    /*background: rgb(10 10 10 / 56%) !important;*/ /*Might Regret Disabling This*/
+    border: 4px double #7EA5D8;  
+}
+/* Steam Stuff*/
+.SteamRealName, .SteamRegionCode, .SteamLevel {
+    font-family: "Motiva Sans", Sans-serif !important;
+    color: #898989 !important;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.SteamDisplayName {
+    font-size: 24px;
+    font-family: "Motiva Sans", Sans-serif !important;
+    color: white !important;
+    text-shadow: 0 0 5px white;
+}
+dt {
+    color        : var(--TableColumnTitleFontColor);
+    border-bottom: 1px solid var(--TableColumnTitleUnderlineColor);
+    border-radius: 3px; 
+}
+td:last-of-type,
+.MainForm .InputsWrapper fieldset .InputHelp,
+.PostsListModule .Posts > li article footer
+{
+    color: #4297e0;
+    font-family: 'xray';
+    padding: 10px;
+    margin-top: 2em;
+}
+.LessThan5minsOld {
+    text-decoration : none;
+    color: #8ccbf9;
+}
+.LessThan30minsOld {
+    text-decoration : none;
+    color: #56b5fb;
+}
+.LessThan1HourOld {
+    text-decoration : none;
+    color: #209cf7;
+}
+.LessThan4HoursOld {
+    color: #69bfff;
+}
+.OlderThan1Day {
+    color: #0092ff;
+}
+#PostsListModule_0 > .Content > .Posts > li {
+    background: var(--ContentBG);
+    /*backdrop-filter: blur(12px);*/
+    border: 4px double #7EA5D8;
+    box-shadow: 0 0 6px #7EA5D8;
+    padding: 30px;
+    margin: 1em 0;
+}
+.PostsListModule .Posts>li .PostTools>* {
+    margin-right: 0.25em;
+    background: #ffffff;
+    box-shadow: 0 0 4px white;
+}
+#PostsListModule_0 .AjaxPaginator, #PostsListModule_0 .InfiniteScroller {
+    background : var(--ContentBG);
+    padding    : .4em;
+}
+.PostsListModule .Posts>li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(137 217 255 / 20%);
+    border: 4px double #a8beff;
+}
+::-webkit-scrollbar-track {
+    background: #bfbebe2e;
+    border: 4px double #7EA5D8;
+}
+spriteicon.NavModuleIcon.BananaNavModuleIcon { 
+    width: 300px !important;
+    margin-left: 220px !important;
+    background: url(https://images2.imgbox.com/0d/ad/2pD5JNRX_o.png);
+}
+#SiteLogo 
+{
+        filter : none !important;
+}
+#SiteLogo img,
+#SiteLogo spriteicon
+{
+        display : none;
+}
+#SiteLogo:after
+{
+        content : url("https://files.gamebanana.com/bitpit/xraybanana.png");
+}
+nav#PrimaryNav {
+    max-width: none !important;
+}
+#AdBlockAppealModule .Content {
+    display: none !important;
+}
+#BananaNavModule widget a {
+    filter: grayscale(0.25);
+    position: relative;
+}
+spriteIcon.NavAppIcon.SectionsNavAppIcon, .SpriteIcon.NavAppIcon.SectionsNavAppIcon {
+    display: none;
+}
+module#SearchNavModule {
+    visibility: hidden;
+}
+.ExtendedContentButton
+{
+    background: #25406b;
+    border: double 4px #7EA5D8;
+    transition: .2s ease-in-out;
+}
+.ExtendedContentButton:hover
+{
+    background: #25406b;
+    border: double 4px #5c88c1;
+    transition: .2s ease-in-out;
+}
+button:hover, button.Selected, button.Expanded, .ButtonLike:hover, .ButtonLike.Selected, .ButtonLike.Expanded {
+    background: #25406ba8 !important;
+    transition: .2s ease;
+    color: var(--ButtonHoverFontColor);
+}
+button.IconButton, .ButtonLike.IconButton {
+    padding: 4px;
+    transition: .2s ease;
+    margin: 5px;
+    border: double 4px #5c88c1;
+    /*background: none;*/
+}
+button, .ButtonLike {
+    transition: .2s ease-in-out;
+}
+#TopNav {
+    background: #0006213d;
+}
+#SectionsNavModule widget svg {
+    display: none;
+}
+module#GamesNavModule {
+    display: none !important;
+}
+#SearchNavModule #SearchForm input[type=text] {
+    display: none;
+}
+#SubNavigator {
+    background: 0;
+    font-size: 13px;
+    border-bottom-style: none;
+    margin-right: 20px;
+}
+.BasicSubNavigator {
+    background: 0;
+}
+#SubNavigator .BasicSubNavigator, #SubNavigator {
+    background: 0;
+    margin-right: 0px;
+}
+#SubNavigator .BasicSubNavigator, #SubNavigator .DropdownMenuSubNavigator {
+    background: #00000094;
+    box-shadow: 0 0 10px #00000094;
+    /* background: var(--SubNavigatorBackgroundColor); */
+    margin-right: 20px;
+}
+#Breadcrumb {
+    display: none;
+}
+body[data-_sContentMaxWidth=Small] #MainContentWrapper {
+    max-width: 1000px;
+}
+/* the thing that widening the top, not sure if i remove it or not*/
+body[data-_sSiteMaxWidth=Small] #BodyWrapper { 
+    max-width: none;
+}
+
+.PageModule > h3::after,
+{
+    content : unset;
+}
+:root
+{
+        --ApproxTextWidth               : 6em;
+        --NewSideNavSmallIconBarWidth   : calc(var(--SideNavSmallIconBarWidth) + var(--ApproxTextWidth));
+        --NewSideNavRegularIconBarWidth : calc(var(--SideNavRegularIconBarWidth) + var(--ApproxTextWidth));
+        --NewSidePanelFullWidth         : calc(var(--SideNavFullWidth) + var(--ApproxTextWidth));
+}
+.row
+{
+    display     : flex;
+}
+ 
+.row .cell
+{
+    display     : flex;
+    flex-direction  : column;
+    align-items : center;
+    justify-content : center;
+    width       : 95%;
+    margin      : 20px;
+    padding     : 20px;
+    background  : rgba(0,0,0,0.8);
+    backdrop-filter: blur(12px);
+    border      : 3px double #7EA5D8;
+    transition  : .2s ease-in-out;
+}
+ 
+.row .icon
+{
+    height      : 64px;
+    margin-bottom   : 20px;
+    -webkit-filter  : brightness(2);
+    transition  : .2s ease-in-out;
+}
+ 
+.row .description
+{
+    font        : 20px 'xray';
+    color       : white;
+    transition  : .2s ease-in-out;
+}
+ 
+.row .cell:hover
+{
+    background  : #000;
+    box-shadow  : 0 0 16px #7EA5D8;
+    
+}
+ 
+.row .cell:hover .icon
+{
+    transform   : scale(1.2);
+    -webkit-filter  : sepia(1) saturate(30) brightness(.7) hue-rotate(180deg);
+}
+ 
+.row .cell:hover .description
+{
+    /*color       : #326489;*/
+    color: #ffffff;
+    text-shadow: 0px 2px 20px white;
+}
+.rowbottom
+{
+    display     : flex;
+}
+/* R.I.P Profile Buttons.
+a#cellbottom-one
+{
+    display     : flex;
+    flex-direction  : column;
+    align-items : center;
+    justify-content : center;
+    width       : 50%;
+    margin      : 20px;
+    padding     : 20px;
+    background  : rgba(0,0,0,0.8);
+    backdrop-filter: blur(12px);
+    border      : 3px double #7EA5D8;
+    transition  : .2s ease-in-out;
+}
+a#cellbottom-two
+{
+    display     : flex;
+    flex-direction  : column;
+    align-items : center;
+    justify-content : center;
+    width       : 50%;
+    margin      : 20px;
+    padding     : 20px;
+    background  : rgba(0,0,0,0.8);
+    backdrop-filter: blur(12px);
+    border      : 3px double #7EA5D8;
+    transition  : .2s ease-in-out;
+}
+a#cellbottom-three
+{
+    display     : flex;
+    flex-direction  : column;
+    align-items : center;
+    justify-content : center;
+    width       : 50%;
+    margin      : 20px;
+    padding     : 20px;
+    background  : rgba(0,0,0,0.8);
+    backdrop-filter: blur(12px);
+    border      : 3px double #7EA5D8;
+    transition  : .2s ease-in-out;
+}
+.rowbottom .icon
+{
+    height      : 64px;
+    margin-bottom   : 20px;
+    -webkit-filter  : brightness(2);
+    transition  : .2s ease-in-out;
+}
+ 
+.rowbottom .description
+{
+    font        : 20px 'xray';
+    color       : white;
+    transition  : .2s ease-in-out;
+}
+ 
+a#cellbottom-one:hover
+{
+    background  : #000;
+    box-shadow  : 0 0 16px #7EA5D8;
+    
+}
+ 
+a#cellbottom-two:hover
+{
+    background  : #000;
+    box-shadow  : 0 0 16px #7EA5D8;
+    
+}
+ 
+a#cellbottom-three:hover
+{
+    background  : #000;
+    box-shadow  : 0 0 16px #7EA5D8;
+    
+}
+ 
+.rowbottom .cellbottom:hover .icon
+{
+    transform   : scale(1.2);
+    -webkit-filter  : sepia(1) saturate(30) brightness(.7) hue-rotate(180deg);
+}
+ 
+.rowbottom .cellbottom:hover .description
+{
+    //color       : #326489;
+    color: #ffffff;
+    text-shadow: 0px 2px 20px white;
+}
+*/
+#tpm__sYogAboutMember .Medals li {
+    opacity: .5;
+    backdrop-filter: blur(12px);
+}
+#tpm__sYogAboutMember .Medals .Medal:hover {
+    /*border-color: #7EA5D8;*/
+    /*opacity: 5;*/
+    /*box-shadow: 0 0px 16px #7EA5D8;*/
+}
+#tpm__sYogAboutMember .Medals .Medal:hover {
+    border-color: #43b1ff !important;
+    opacity: 5;
+    box-shadow: 0 0px 16px #7EA5D8;
+}
+#tpm__sYogAboutMember .Medals li {
+    transition: .2s ease;
+}
+a, .Linklike {
+    cursor: pointer;
+    text-decoration: none;
+    transition: .2s ease-in-out;
+    /*color: white;*/
+    color: #98d4ff;
+}
+a:hover, .Linklike:hover {
+    color: #8fcbff;
+    text-shadow: 1px 1px 10px #8fcbff;
+    transition: .2s ease-in-out;
+    ): ;
+}
+.PostsListModule .Posts > li article .PostStamps li {
+    background: #56bfff42;
+    box-shadow: 0 0 20px #56bfff42;
+}
+.PostsListModule .Posts > li article .PostStamps li[data-_sCategory=positive] {
+    box-shadow: 0 0 25px #56bfff42;
+}
+#SubNavigator .DropdownMenuSubNavigator > li > a {
+    padding: 0.5em;
+    text-shadow: 0 0 10px #5bc3fc;  
+    transition: .2s ease-in-out;
+    color: #e2e2e2;
+    color: var(--DefaultTextColor);
+}
+#SubNavigator .DropdownMenuSubNavigator > li > a:hover 
+{ 
+    text-shadow: 0 0 10px white;
+    transition: .2s ease-in-out;
+}
+.PostTools button {
+    border: 3px double #5c88c1;
+    transition: .2s ease-in-out;
+}
+
+.PostTools button:hover {
+	border-color: #5bc3fc;
+    transition: .2s ease-in-out;
+}
+.PostHeader {
+	backdrop-filter: blur(2px);
+	padding: 10px;
+	background: linear-gradient(270deg, #6cb1e100, #6cb1e133, #6ca1e1c2);
+	background-attachment: fixed;
+}
+.PostTools {
+    opacity: 0.2;
+}
+#PageFooter {
+    background: rgb(0 0 0 / 68%);
+}
+.ProseMirror {
+    transition: .2s ease !important;
+}
+.ProseMirror:hover {
+    background-color: #0a1b2c;
+    transition: .2s ease;
+}
+#SecondaryNav>wrapper module.Selected icon {
+   background: #3bacf1cf;
+   box-shadow: 0 0 20px #56bfff;
+   transition: .2s ease-in-out;
+}
+#SecondaryNav header>strong {
+    font-family: 'xray';
+    text-transform: uppercase;
+}
+#SecondaryNav module a.Icon:hover {
+    background: #ffffffcc;
+    box-shadow: 0 0 20px white;
+	transition: .2s ease-in-out;
+}
+spriteIcon.NavModuleIcon.SectionsNavModuleIcon {
+    filter: contrast(3);
+}
+itemCount {
+    font-weight: bold;
+    text-shadow: 1px 2px 2px #009eff91;
+	color: white;
+}
+#SiteMenuToggle {
+    transition: .4s ease;
+}
+spriteIcon.MiscIcon.SearchIcon, .SpriteIcon.MiscIcon.SearchIcon {
+    filter: contrast(2);
+}
+stateLabel {
+	text-shadow: 0 0 2px white;
+    background: #000000;
+}
+dt {
+    text-transform: uppercase;
+	margin-bottom: .50em;
+}
+#SubNavigator li itemCount {
+    color: white;
+}
+.GreyColor {
+    color: var(--DefaultGreyColor);
+	/*background: #121619;*/
+}
+statelabel.GreyColor {
+    content: '';
+	animation-name: OfflineStatus;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes OfflineStatus { 
+     0% { background: #121619; } 
+    30% { background: #001c33; color: #ffffffba; text-shadow: 0px 0px 8px white; } 
+    100% { background: #121619; }}
+}
+statelabel.GreyColor::after {
+    content: '';
+}
+statelabel.GreyColor::after {
+    content: '';
+	animation-name: dots;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes dots { 
+     0% { content: '.'; } 
+    30% { content:'..' } 
+    100% { content: '' }}
+}
+.guard_desc {
+}
+.guard_desc {
+    text-align: center;
+    margin: 1em;
+    text-shadow: 0 1px 1px black;
+    font-weight: bold;
+}
+.SteamGameArt.Content {
+}
+.SteamGameArt.Content {
+    background: https://i.imgur.com/oF5arJ5.png;
+}
