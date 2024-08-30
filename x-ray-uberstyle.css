@@ -8,7 +8,7 @@
 /*                                           */
 /*   Version: V11.7                          */
 /*                                           */
-/*   Last Edit: 07.08.2024                   */
+/*   Last Edit: 30.08.2024                   */
 /*                                           */
 /*                                           */
 /*   Editor note: This uber is old asf       */
@@ -97,15 +97,15 @@ body[data-_sSiteMaxWidth=Medium] #BodyWrapper {
     align-self: flex-start;
 }
 #PrimaryNav {
-    background: #0000006e;
+    background: linear-gradient(90deg, #061626, #061626f5, transparent);
     position: static;
 }
 #SecondaryNav {
     z-index: 4;
-	height: 36px;
+    height: 36px;
     max-width: 100%;
     box-sizing: border-box;
-    position: absolute !important;
+    position: sticky;
     transition: .2s ease-in-out;
     background: rgb(14 30 43 / 57%);
     overflow: hidden;
