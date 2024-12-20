@@ -36,6 +36,7 @@
 	-SubNavigatorTabHoverBorderColor      : #87d2ff;
 	--StateLabelBackground                : black;
 	--InputTitleUnderlineColor            : #dcdcdc;
+	--NavUpdatesIndicatorColor            : #6ee16ca8;
 }
 
 body {
@@ -667,7 +668,7 @@ a:hover, .Linklike:hover {
    transition: .2s ease-in-out;
 }
 #SecondaryNav module a.Icon:hover {
-    background: #ffffffcc !important;
+    background: #00ff1370;
     box-shadow: 0 0 20px white;
 	transition: .2s ease-in-out;
 }
