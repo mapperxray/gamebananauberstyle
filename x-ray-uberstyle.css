@@ -657,17 +657,17 @@ a:hover, .Linklike:hover {
     background-color: #0a1b2c;
     transition: .2s ease;
 }
-#SecondaryNav>wrapper module.Selected icon {
-   background: #3bacf1cf;
-   box-shadow: 0 0 20px #56bfff;
-   transition: .2s ease-in-out;
-}
 #SecondaryNav header>strong {
     font-family: 'xray';
     text-transform: uppercase;
 }
+#SecondaryNav>wrapper module.Selected icon {
+   background: #3bacf1cf !important;
+   box-shadow: 0 0 20px #56bfff;
+   transition: .2s ease-in-out;
+}
 #SecondaryNav module a.Icon:hover {
-    background: #ffffffcc;
+    background: #ffffffcc !important;
     box-shadow: 0 0 20px white;
 	transition: .2s ease-in-out;
 }
