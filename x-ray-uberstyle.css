@@ -37,6 +37,7 @@
 	--StateLabelBackground                : black;
 	--InputTitleUnderlineColor            : #dcdcdc;
 	--NavUpdatesIndicatorColor            : #6ee16ca8;
+	--SecondaryNavModuleIconHoverColor    : #00ff1370; 
 }
 
 body {
@@ -668,7 +669,7 @@ a:hover, .Linklike:hover {
    transition: .2s ease-in-out;
 }
 #SecondaryNav module a.Icon:hover {
-    background: #00ff1370;
+    background: var(--SecondaryNavModuleIconHoverColor) !important;
     box-shadow: 0 0 20px white;
 	transition: .2s ease-in-out;
 }
