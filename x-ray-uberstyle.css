@@ -8,7 +8,7 @@
 /*                                           */
 /*   Version: V11.7                          */
 /*                                           */
-/*   Last Edit: 30.08.2024                   */
+/*   Last Major Edit: 30.08.2024             */
 /*                                           */
 /*                                           */
 /*   Editor note: This uber is old asf       */
@@ -41,7 +41,7 @@
 }
 
 body {
-    background: #000 url('https://www.psdgraphics.com/file/world-map-background.jpg') fixed no-repeat;
+    background: #000 url('https://raw.githubusercontent.com/mapperxray/gamebananauberstyle/refs/heads/main/world-map-background.jpg') fixed no-repeat;
     background-size: 100.5% 150vh;
     cursor: url('http://i.imgur.com/lIIono0.png'), default !important;
 }
