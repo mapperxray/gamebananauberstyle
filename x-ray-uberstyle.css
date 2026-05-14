@@ -238,6 +238,9 @@ h3 {
     width: 2em;
     background: var(--ModuleTitleUnderlineColor);
 }
+#HeadlineLeaderboardModule { /*idk what is this tbh but i had to disable it*/
+    display: none;
+}
 module.PageModule > div.Content {
     backdrop-filter: blur(12px);
     /*background: rgb(10 10 10 / 56%) !important;*/ /*Might Regret Disabling This*/
